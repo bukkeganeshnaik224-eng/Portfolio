@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Bukke Ganesh Naik | Cybersecurity &amp; Software Development Portfolio</title>
+  <meta name="description" content="Portfolio of Bukke Ganesh Naik: cybersecurity, software development, artificial intelligence, projects, certifications, and technical learning." />
+  <meta name="author" content="Bukke Ganesh Naik" />
+  <meta name="theme-color" content="#07090D" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Open Graph / social sharing (set absolute URLs after deploying, see README) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bukke Ganesh Naik | Cybersecurity &amp; Software Development Portfolio" />
+  <meta property="og:description" content="Cybersecurity, software development, AI projects, certifications and technical learning." />
+  <meta property="og:image" content="assets/images/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="assets/images/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bukke Ganesh Naik",
+    "jobTitle": "Cybersecurity & Software Development Student",
+    "alumniOf": "Mohan Babu University",
+    "email": "mailto:bukkeganeshnaik@gmail.com",
+    "sameAs": ["https://github.com/bukkeganeshnaik224-eng"]
+  }
+  </script>
+  <script>
+    // Apply saved theme before paint to avoid a flash.
+    try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-box">
+      <div class="loader-ring"></div>
+      <div class="loader-text mono">initializing<span class="dots"></span></div>
+    </div>
+  </div>
+
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-a" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-b" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="Bukke Ganesh Naik, home">
+        <span class="brand-mark mono">BGN</span><span class="brand-dot"></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="navLinks"></ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle light and dark theme"></button>
+        <a class="btn btn-sm btn-primary nav-cta" href="#contact">Contact</a>
+        <button class="icon-btn nav-burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <ul id="mobileLinks"></ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="badge-row">
+            <span class="avail" id="availBadge"></span>
+          </div>
+          <p class="eyebrow mono">HELLO, WORLD. I'M</p>
+          <h1 id="hero-title" class="hero-name">BUKKE<br />GANESH <span class="grad">NAIK</span></h1>
+          <p class="hero-role" aria-live="off">
+            <span class="role-prefix mono">&gt;</span>
+            <span id="roleText" class="role-text">Aspiring Cybersecurity Engineer</span><span class="caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero-lead" id="heroLead">I build technology-driven projects, explore cybersecurity, and develop practical applications using modern programming tools. I am continuously learning, building, and preparing to solve real-world problems through secure and intelligent software.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects">Explore My Work <span data-icon="arrow-right"></span></a>
+            <a class="btn btn-ghost" id="heroResume" href="documents/resume.pdf" download>Download Resume <span data-icon="download"></span></a>
+            <a class="btn btn-link" href="#contact">Contact Me</a>
+          </div>
+          <ul class="social-row" id="heroSocial" aria-label="Profile links"></ul>
+        </div>
+
+        <div class="hero-visual" id="heroVisual">
+          <div class="net-wrap" aria-hidden="true">
+            <svg class="net" viewBox="0 0 520 560" fill="none" id="netSvg"></svg>
+          </div>
+          <div class="id-card tilt" id="idCard">
+            <div class="id-top mono">
+              <span><i class="dot dot-r"></i><i class="dot dot-y"></i><i class="dot dot-g"></i></span>
+              <span>IDENTITY // SECURE</span>
+            </div>
+            <div class="id-body">
+              <div class="id-photo">
+                <img src="assets/images/profile.jpg" alt="Portrait of Bukke Ganesh Naik" width="300" height="300" fetchpriority="high" decoding="async" />
+                <span class="id-scan" aria-hidden="true"></span>
+              </div>
+              <div class="id-meta">
+                <p class="id-name">Bukke Ganesh Naik</p>
+                <p class="id-sub">B.Tech CSE (Cyber Security)</p>
+                <p class="id-sub">Mohan Babu University</p>
+                <div class="id-tags">
+                  <span>Cybersecurity</span><span>AI</span><span>Full-Stack</span>
+                </div>
+              </div>
+            </div>
+            <div class="id-foot mono">
+              <span>UID: BGN-2029</span>
+              <span class="id-ok"><i class="pulse"></i> ACTIVE LEARNER</span>
+            </div>
+          </div>
+          <div class="shield-float" aria-hidden="true">
+            <svg viewBox="0 0 64 72" fill="none"><path d="M32 3 6 13v20c0 18 11 30 26 36 15-6 26-18 26-36V13L32 3Z" stroke="url(#sg)" stroke-width="2.2"/><path d="m21 36 8 8 15-17" stroke="var(--green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="sg" x1="6" y1="3" x2="58" y2="69"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#39FF88"/></linearGradient></defs></svg>
+          </div>
+          <div class="mini-term mono" aria-hidden="true">
+            <span class="c-g">$</span> nmap --learn <span class="c-c">curiosity</span><br />
+            <span class="c-m">[ok]</span> building secure software
+          </div>
+        </div>
+      </div>
+      <a class="scroll-ind" href="#about" aria-label="Scroll to About section"><span class="mouse"><i></i></span><span class="mono">SCROLL</span></a>
+    </section>
+
+    <!-- TERMINAL -->
+    <section class="section" id="terminal" aria-labelledby="terminal-title">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow mono">// 01 — interactive</p>
+          <h2 id="terminal-title">Meet me in the <span class="grad">terminal</span></h2>
+          <p class="sec-sub">A simulated, local-only shell. It never runs real system commands. Try <code>help</code>.</p>
+        </header>
+        <div class="terminal reveal" id="termBox" role="region" aria-label="Interactive terminal simulation">
+          <div class="term-bar">
+            <span class="term-dots"><i class="dot dot-r"></i><i class="dot dot-y"></i><i class="dot dot-g"></i></span>
+            <span class="mono term-title">ganesh@portfolio — simulated</span>
+            <span class="term-actions">
+              <button type="button" class="btn btn-sm btn-ghost" id="termReplay">Replay</button>
+              <button type="button" class="btn btn-sm btn-ghost" id="termReset">Reset</button>
+            </span>
+          </div>
+          <div class="term-screen mono" id="termScreen" tabindex="0" aria-live="polite"></div>
+          <form class="term-input" id="termForm" autocomplete="off">
+            <label for="termCmd" class="mono term-prompt" id="termPrompt">ganesh@portfolio:~$</label>
+            <input id="termCmd" class="mono" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Type a command and press Enter" placeholder="type a command…" />
+          </form>
+          <div class="term-chips" id="termChips"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow mono">// 02 — about</p>
+          <h2 id="about-title">Building toward <span class="grad">secure, intelligent</span> software</h2>
+        </header>
+        <div class="about-grid">
+          <div class="about-copy reveal" id="aboutCopy"></div>
+          <div class="about-cards" id="aboutCards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow mono">// 03 — skills</p>
+          <h2 id="skills-title">Skills <span class="grad">dashboard</span></h2>
+          <p class="sec-sub">Grouped by area. No inflated percentages: this is what I use and what I am actively learning.</p>
+        </header>
+        <div class="skill-tabs reveal" id="skillTabs" role="tablist" aria-label="Skill categories"></div>
+        <div class="skill-grid" id="skillGrid"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow mono">// 04 — projects</p>
+          <h2 id="projects-title">Featured <span class="grad">projects</span></h2>
+          <p class="sec-sub">Each card is labeled live, prototype or in progress, so you always know what is shipped.</p>
+        </header>
+        <div class="filter-row reveal" id="projectFilters" role="group" aria-label="Filter projects by status"></div>
+        <div class="project-grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section" id="certificates" aria-labelledby="cert-title">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow mono">// 05 — credentials</p>
+          <h2 id="cert-title">Certifications &amp; <span class="grad">achievements</span></h2>
+          <p class="sec-sub">Listed from my resume. Certificate files open in a viewer once the PDFs are added.</p>
+        </header>
+        <div class="cert-tools reveal">
+          <label class="search" for="certSearch">
+            <span data-icon="search"></span>
+            <input id="certSearch" type="search" placeholder="Search title or issuer…" aria-label="Search certificates" />
+          </label>
+          <div class="filter-row" id="certFilters" role="group" aria-label="Filter certificates by category"></div>
+        </div>
+        <p class="result-count mono" id="certCount" aria-live="polite"></p>
+        <div class="cert-grid" id="certGrid"></div>
+      </div>
+    </section>
+
+    <!-- DOCUMENTS -->
+    <section class="section" id="documents" aria-labelledby="docs-title">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow mono">// 06 — documents</p>
+          <h2 id="docs-title">My professional <span class="grad">documents</span></h2>
+        </header>
+        <div class="docs-grid reveal">
+          <div class="doc-card glass" id="resumeCard"></div>
+          <div class="doc-card glass">
+            <div class="doc-icon" data-icon="award"></div>
+            <h3>Certificate gallery</h3>
+            <p>Browse, search and preview every credential in the gallery above, with full-screen and open-in-new-tab options.</p>
+            <a class="btn btn-ghost" href="#certificates">Open gallery <span data-icon="arrow-right"></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education" aria-labelledby="edu-title">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow mono">// 07 — education</p>
+          <h2 id="edu-title">Education <span class="grad">timeline</span></h2>
+        </header>
+        <ol class="timeline" id="eduTimeline"></ol>
+      </div>
+    </section>
+
+    <!-- ACTIVITIES + JOURNEY -->
+    <section class="section" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow mono">// 08 — activities</p>
+          <h2 id="journey-title">Hackathons &amp; <span class="grad">learning journey</span></h2>
+        </header>
+        <div id="activities" class="activities"></div>
+        <div id="experienceBlock"></div>
+      </div>
+    </section>
+
+    <!-- GITHUB -->
+    <section class="section" id="github" aria-labelledby="gh-title">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow mono">// 09 — open source</p>
+          <h2 id="gh-title">GitHub <span class="grad">activity</span></h2>
+          <p class="sec-sub">Pulled live from the public GitHub API and cached for an hour. No numbers are made up.</p>
+        </header>
+        <div id="ghRoot" class="gh-root"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="sec-head reveal center">
+          <p class="eyebrow mono">// 10 — contact</p>
+          <h2 id="contact-title" class="contact-title">LET'S BUILD SOMETHING <span class="grad">MEANINGFUL.</span></h2>
+          <p class="sec-sub">I am interested in cybersecurity, software development, AI projects, internships, and opportunities to collaborate and learn.</p>
+        </header>
+        <div class="contact-grid reveal">
+          <div class="contact-side">
+            <a class="btn btn-primary btn-block" id="mailBtn" href="mailto:bukkeganeshnaik@gmail.com"><span data-icon="mail"></span> bukkeganeshnaik@gmail.com</a>
+            <ul class="contact-links" id="contactLinks"></ul>
+          </div>
+          <form class="contact-form glass" id="contactForm" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" />
+                <small class="err" data-for="name"></small>
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="120" />
+                <small class="err" data-for="email"></small>
+              </div>
+            </div>
+            <div class="field">
+              <label for="cf-subject">Subject</label>
+              <input id="cf-subject" name="subject" type="text" required minlength="3" maxlength="120" />
+              <small class="err" data-for="subject"></small>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required minlength="10" maxlength="2000"></textarea>
+              <small class="err" data-for="message"></small>
+            </div>
+            <!-- Honeypot: real people never see or fill this. -->
+            <div class="hp" aria-hidden="true"><label>Leave empty <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+            <button class="btn btn-primary" type="submit" id="cfSubmit">Send message <span data-icon="send"></span></button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="mono">&copy; <span id="year"></span> Bukke Ganesh Naik. Built with care.</p>
+      <p class="mono muted">Learning | Building | Improving</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top" hidden></button>
+
+  <!-- Certificate modal -->
+  <div class="modal" id="certModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel glass" id="modalPanel">
+      <div class="modal-head">
+        <div>
+          <p class="eyebrow mono" id="modalCat"></p>
+          <h3 id="modalTitle"></h3>
+        </div>
+        <div class="modal-tools">
+          <button class="icon-btn" id="modalFull" type="button" aria-label="Toggle full screen"></button>
+          <button class="icon-btn" data-close type="button" aria-label="Close dialog"></button>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-foot" id="modalFoot"></div>
+    </div>
+  </div>
+
+  <noscript>
+    <div class="noscript">
+      <h1>Bukke Ganesh Naik</h1>
+      <p>Cybersecurity engineer in progress, AI &amp; full-stack developer.</p>
+      <p><a href="mailto:bukkeganeshnaik@gmail.com">bukkeganeshnaik@gmail.com</a> · <a href="https://github.com/bukkeganeshnaik224-eng">GitHub</a></p>
+      <p>Please enable JavaScript to view the full portfolio.</p>
+    </div>
+  </noscript>
+
+  <script src="js/data/profile.js"></script>
+  <script src="js/data/skills.js"></script>
+  <script src="js/data/projects.js"></script>
+  <script src="js/data/certificates.js"></script>
+  <script src="js/data/education.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/sections.js"></script>
+  <script src="js/certificates.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
